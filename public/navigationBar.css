@@ -1,19 +1,27 @@
+body{
+  background-color: #e6e8eb;
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #38444d;
+    
+    /*background-color: #38444d;*/
   }
 li{
     float: left;
 }
 li a, .dropbtn {
     display: inline-block;
-    color: white;
     text-align: center;
     padding: 14px 16px;
+
     text-decoration:none;
+    color: black;
+    font-size: medium;
   }
   li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
@@ -44,10 +52,4 @@ li.dropdown{
 }
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-div {
-    margin: 2px;;
-    padding:1px 16px;
-    /*height:1000px;*/
 }
