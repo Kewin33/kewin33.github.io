@@ -1,9 +1,10 @@
 body{
+  margin: 0;
   background-color: #e6e8eb;
 }
 
 
-ul {
+.navigationBar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -12,6 +13,8 @@ ul {
     /*background-color: #38444d;*/
   }
 li{
+  margin: 0;
+  padding: 0;
     float: left;
 }
 li a, .dropbtn {
@@ -22,9 +25,11 @@ li a, .dropbtn {
     text-decoration:none;
     color: black;
     font-size: medium;
+    font-family: fantasy;
   }
-  li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+  li:not(#logo)  a:hover , .dropdown:hover .dropbtn {
+    background-color: rgb(72, 105, 255);
+    color: white;
   }
 
 
