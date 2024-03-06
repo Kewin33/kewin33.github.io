@@ -1,5 +1,5 @@
 async function getLichessLink() {
-    var url = "https://turniere.schachklub-kelheim.de/kk-3/round/1";
+    var url = "https://www.google.com";
   
     try {
       // Use the fetch API to make the request
