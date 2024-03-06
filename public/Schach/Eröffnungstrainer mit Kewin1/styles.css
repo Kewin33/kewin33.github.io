@@ -1,0 +1,108 @@
+:root{
+    --checked-background-color:rgb(0, 159, 0);
+}
+body{
+    background-color: #dbdbdb;
+}
+
+#form{
+    background-color: white;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    box-shadow: 15px 5px 5px  grey;
+}
+input[name="username"]{
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+/*container presettings*/
+.container-presettings{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.checkbox-label{
+    padding: 7px;
+    margin: 7px 0px;
+    display: flex;
+    background-color: rgba(228, 228, 228, 0.663);
+    color: black;
+    border: 1px solid grey;
+
+    justify-content: center;
+}
+.container-presettings label:first-of-type{
+    border-radius: 5px 0px 0px 5px;
+}
+.container-presettings label:last-of-type{
+    border-radius: 0px 5px 5px 0px;
+}
+
+
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"]:checked + label{
+    background-color: var(--checked-background-color);
+    color: white;
+}
+
+
+input[type="submit"]{
+    width: 10rem;
+    background-color: var(--checked-background-color);
+    color: white;
+    font-size: 20px;
+    font-family: fantasy;
+
+    border-radius: 7px;
+    border: none;
+    padding: 10px 0px;
+
+    
+}
+input[type="submit"]:hover{
+    background-color: rgba(0, 159, 0, 0.939);
+    border: none ;
+}
+
+.form-headings{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr ;
+    font-weight: bold;
+    padding: 7px 0px ;
+    margin: 7px 0px;
+}
+/*hidden options*/
+#advancedOptions{
+    display: flex;
+    flex-direction: column;
+
+}
+.ratingrange{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    grid-gap: 0px 0px;
+    align-items: start;
+
+}
+
+
+
+input[type="checkbox"]:checked + label{
+    background-color: var(--checked-background-color);
+    color: white;
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+.speed{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}

@@ -41,14 +41,19 @@ header#top .site-title-nav nav#topnav section a span{
   text-decoration-style: solid ;
   text-decoration-color: rgb(77, 77, 77) ;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 header#top .site-title-nav nav#topnav section{
   position: relative;
   padding: 8px 9px;
   display: inline-block;
+  
 }
-
+.subseiten{
+  border-left: transparent solid 4px;
+}
 header#top div.site-title-nav nav#topnav section div.group {
   display: none;
   background-color: white;

@@ -14,8 +14,77 @@
 
   <main>
     <p>Hier ist der Hauptinhalt meiner Webseite.</p>
-    <input type="text" id="input"><br>
-    <button onclick="showResult()">Los geht's!</button><br>
+    <form id="form">
+      <label for="username" class="form-headings"> Lichess Username:</label>
+      <input type="text" id="username" name="username" placeholder="Kewin3" pattern="[^&=]*"><br>
+      <!-- ENUM of Presettings: Recent, Older, Interesting(high winning %), decisive(few draws, but high winning)-->
+      <div class="container-presettings">
+        <input type="radio" id="mostRecent" value="mostRecent" name="presettings" required>
+        <label for="mostRecent" class="checkbox-label">Most recent Theory</label>
+        <input type="radio" id="mostOldschool" value="mostOldschool" name="presettings" required>
+        <label for="mostOldschool" class="checkbox-label">Older popular Theory</label>
+        <input type="radio" id="mostInteresting" value="mostInteresting" name="presettings" required>
+        <label for="mostInteresting" class="checkbox-label">Most interesting lines</label>
+        <input type="radio" id="mostDecisive" value="mostDecisive" name="presettings" required>
+        <label for="mostDecisive" class="checkbox-label">Most decisive lines</label> 
+        <input type="radio" id="custom" value="custom" name="presettings">
+        <label for="custom" class="checkbox-label">Custom</label>
+      </div>
+      
+      <br>
+      <br>
+      <div id="advancedOptions" style="display: none;">
+        <div class="form-headings">Ratingbereich</div>
+      <div  class="ratingrange">
+        <input type="checkbox" name="ratingoption" id="ZERO" value=0>
+        <label for="ZERO" class="checkbox-label">0-1000</label>
+        <input type="checkbox" name="ratingoption" id="ONE" value="1">
+        <label for="ONE" class="checkbox-label">1000-1200</label>
+        <input type="checkbox" name="ratingoption" id="TWO" value="2">
+        <label for="TWO" class="checkbox-label">1200-1400</label>  
+        <input type="checkbox" name="ratingoption" id="THREE" value="3">
+        <label for="THREE" class="checkbox-label">1400-1600</label>  
+        <input type="checkbox" name="ratingoption" id="FOUR" value="4">
+        <label for="FOUR" class="checkbox-label">1600-1800</label>
+        <input type="checkbox" name="ratingoption" id="FIVE" value="5">
+        <label for="FIVE" class="checkbox-label">1800-2000</label>
+        <input type="checkbox" name="ratingoption" id="SIX" value="6">
+        <label for="SIX" class="checkbox-label">2000-2200</label>
+        <input type="checkbox" name="ratingoption" id="SEVEN" value="7">
+        <label for="SEVEN" class="checkbox-label">2200-2500</label>
+        <input type="checkbox" name="ratingoption" id="EIGHT" value="8">
+        <label for="EIGHT" class="checkbox-label">2500-3000+</label>
+      </div> 
+
+      <div class="form-headings">Bedenkzeit:</div>
+      <div  class="speed">
+        <input type="checkbox" name="speedoption" id="ZEROSPEED" value="0">
+        <label for="ZEROSPEED" class="checkbox-label">Ultrabullet</label>
+        <input type="checkbox" name="speedoption" id="ONESPEED" value="1">
+        <label for="ONESPEED" class="checkbox-label">Bullet</label>
+        <input type="checkbox" name="speedoption" id="TWOSPEED" value="2">
+        <label for="TWOSPEED" class="checkbox-label">Blitz</label>  
+        <input type="checkbox" name="speedoption" id="THREESPEED" value="3">
+        <label for="THREESPEED" class="checkbox-label">Rapid</label>  
+        <input type="checkbox" name="speedoption" id="FOURSPEED" value="4">
+        <label for="FOURSPEED" class="checkbox-label">Classical</label>
+        <input type="checkbox" name="speedoption" id="FIVESPEED" value="5">
+        <label for="FIVESPEED" class="checkbox-label">Correspondence</label>
+      </div>
+
+      <div class="form-headings">Zeitraum Anfang: <span></span> <input type="month" name="since" id="since"> <span></span></div>
+      <div class="form-headings">Zeitraum Ende: <span></span> <input type="month" name="until" id="until"> <span></span></div>
+           
+
+      </div>
+      
+      <br>
+
+      <input type="submit" value="Let's Go/Play" id="submit">
+    </form>
+    
+
+    <button onclick="googleAPI()">Los geht's!</button><br>
 
   </main>
 
