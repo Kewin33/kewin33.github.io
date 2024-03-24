@@ -14,7 +14,13 @@
 
   <main>
     <p>Hier ist der Hauptinhalt meiner Webseite.</p>
-    <button onclick="getLichessLink()">Klicke mich!</button>
+    <form action="lichessAccFinder()">
+      <label for="firstName">Vorname:</label><br>
+      <input type="text" id="firstname" name="firstName" placeholder="Kewin"><br><br>
+      <label for="lastName">Nachname:</label><br>
+      <input type="text" id="lastname" name="lastName" placeholder="Plastik"><br><br>
+      <button type="submit">Suchen</button>
+    </form>
 
   <footer>
     <p>Copyright © 2023 Meine Webseite</p>
